@@ -25,3 +25,25 @@ mongoose
   .catch(error => {
     console.error('Error connecting to the database', error);
   });
+
+Recipe.create({
+    title: "Kartoffelbrei",
+    level: "Easy Peasy",
+    dishType: "main_course",
+    duration: 10
+}).then(recipe => {
+  console.log(recipe.title);
+})
+.catch(err => {
+  console.log(err);
+})
+
+Recipe.insertMany(
+
+)
+.then(recipe => {
+  console.log(recipe.title);
+})
+.catch(err => {
+  console.log(err);
+})
